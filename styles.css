@@ -1,27 +1,22 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+#gameboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  justify-content: center;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-menu:not(article menu),
-ol:not(article ol),
-ul:not(article ul) {
-  list-style: none;
-}
-
-menu,
-ol,
-ul {
-  padding-left: 0;
-}
-
-article ol,
-article ul {
-  list-style-position: inside;
+.square {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 30%;
+  text-align: center;
+  font-size: 80px;
 }
