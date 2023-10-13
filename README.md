@@ -8,5 +8,6 @@ Building a Tic Tac Toe game you can play in browser
 ## Thoughts
 
 ## Learnings
+- Create HTMl skeleton first so that you can focus on the Javascript after
 
 ## Recapping
