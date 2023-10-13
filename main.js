@@ -14,6 +14,13 @@ const Gameboard = (() => {
   }
 })();
 
+const createPlayer = (name, mark) => {
+  return {
+    name,
+    mark
+  }
+}
+
 const startBtn = document.querySelector("#start-btn");
 startBtn.addEventListener("click", () => {
   // Game.start();
