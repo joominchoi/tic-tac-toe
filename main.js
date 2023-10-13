@@ -44,11 +44,6 @@ const Game = (() => {
     currentPlayerIndex = 0;
     gameOver = false;
     Gameboard.render();
-
-    const squares = document.querySelectorAll(".square");
-    squares.forEach((square) => {
-      square.addEventListener("click", handleClick);
-    })
   }
 
   const handleClick = (event) => {
