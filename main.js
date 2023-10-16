@@ -62,10 +62,16 @@ const Game = (() => {
 
     if (checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)) {
       gameOver = true;
-      alert(`${players[currentPlayerIndex].name} won!`)
+      setTimeout(() => {
+        alert(`${players[currentPlayerIndex].name} won!`)
+      }
+        , 10);
     } else if (checkForTie(Gameboard.getGameboard())) {
       gameOver = true
-      alert(`It's a tie!`)
+      setTimeout(() => {
+        alert(`It's a tie!`)
+      }
+        , 10);
     }
     currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
   }
@@ -110,7 +116,7 @@ function checkForTie(board) {
 }
 
 const restartButton = document.querySelector("#restart-btn");
-restartButton.addEventListener("click",() => {
+restartButton.addEventListener("click", () => {
   Game.restart();
 })
 
