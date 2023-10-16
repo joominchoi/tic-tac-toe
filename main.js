@@ -51,11 +51,14 @@ const Game = (() => {
   }
 
   const handleClick = (event) => {
+    if (gameOver) {
+      return;
+    }
     let index = parseInt(event.target.id.split("-")[1])
     if (Gameboard.getGameboard()[index] !== "")
       return;
 
-    Gameboard.update(index, players[currentPlayerIndex].mark)
+    Gameboard.update(index, players[currentPlayerIndex].mark);
 
     if (checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)) {
       gameOver = true;
@@ -72,6 +75,7 @@ const Game = (() => {
       Gameboard.update(i, "")
     }
     Gameboard.render();
+    gameOver = false;
   }
 
   return {
