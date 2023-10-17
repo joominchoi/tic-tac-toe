@@ -20,3 +20,13 @@
   text-align: center;
   font-size: 80px;
 }
+
+#player-names {
+  display: flex;
+  justify-content: center;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+}
